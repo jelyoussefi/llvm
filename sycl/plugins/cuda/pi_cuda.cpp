@@ -1094,6 +1094,7 @@ pi_result cuda_piextDeviceSelectBinary(pi_device device,
   // Look for an image for the NVPTX64 target, and return the first one that is
   // found
   for (pi_uint32 i = 0; i < num_binaries; i++) {
+    std::cout<<"======================= " << i << " / " <<num_binaries<<" : "<<binaries[i]->DeviceTargetSpec<<std::endl;
     if (strcmp(binaries[i]->DeviceTargetSpec,
                __SYCL_PI_DEVICE_BINARY_TARGET_NVPTX64) == 0) {
       *selected_binary = i;
