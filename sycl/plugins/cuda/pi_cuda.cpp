@@ -1095,8 +1095,8 @@ pi_result cuda_piextDeviceSelectBinary(pi_device device,
   // found
   for (pi_uint32 i = 0; i < num_binaries; i++) {
     std::cout<<"======================= " << i << " / " <<num_binaries<<" : "<<binaries[i]->DeviceTargetSpec<<std::endl;
-    if (strcmp(binaries[i]->DeviceTargetSpec,
-               __SYCL_PI_DEVICE_BINARY_TARGET_NVPTX64) == 0) {
+    /*if (strcmp(binaries[i]->DeviceTargetSpec,
+               __SYCL_PI_DEVICE_BINARY_TARGET_NVPTX64) == 0)*/ {
       *selected_binary = i;
       return PI_SUCCESS;
     }
